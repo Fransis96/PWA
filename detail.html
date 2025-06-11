@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Detail Profil</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+
+  <!-- Manifest -->
+  <link rel="manifest" href="manifest.json" />
+</head>
+
+<body>
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container">
+      <a class="navbar-brand" href="#">Profil Saya</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navContent">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navContent">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="index.html">Beranda</a></li>
+          <li class="nav-item"><a class="nav-link active" href="detail.html">Detail</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Detail Content -->
+  <div class="container py-5">
+    <div class="row justify-content-center">
+      <div class="col-lg-8">
+        <div class="card shadow-lg">
+          <div class="card-body">
+            <h2 class="card-title mb-3">Tentang Saya</h2>
+            <p>Saya adalah mahasiswa yang antusias dalam mempelajari pengembangan web modern. Proyek ini dibuat untuk memenuhi tugas pengembangan web dengan pendekatan <strong>Responsive Web Design</strong> menggunakan Bootstrap 5.</p>
+
+            <h5 class="mt-4">Teknologi yang Digunakan:</h5>
+            <ul>
+              <li>HTML5</li>
+              <li>CSS3</li>
+              <li>Bootstrap 5 (Grid System, Card, Navbar, dan Responsiveness)</li>
+            </ul>
+
+            <h5 class="mt-4">Fitur Responsif:</h5>
+            <ul>
+              <li>Menggunakan tag meta <code>viewport</code> untuk tampilan mobile-friendly.</li>
+              <li>Menggunakan Bootstrap Grid dan Breakpoints (col-md-4, col-md-8).</li>
+              <li>Layout fleksibel dan menyesuaikan berbagai ukuran layar.</li>
+            </ul>
+
+            <h5 class="mt-4">Gambar Responsif:</h5>
+            <p>Gambar profil disesuaikan dengan class Bootstrap <code>img-fluid</code> agar responsif terhadap lebar layar.</p>
+
+            <a href="index.html" class="btn btn-secondary mt-3">Kembali ke Beranda</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="text-center text-white bg-dark py-3">
+    <p class="mb-0">&copy; 2025 Frans. All rights reserved.</p>
+  </footer>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+  <script>
+    // Registrasi service worker
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', function () {
+        navigator.serviceWorker.register('sw.js')
+          .then(function (registration) {
+            console.log('ServiceWorker registered: ', registration.scope);
+          }, function (err) {
+            console.log('ServiceWorker failed: ', err);
+          });
+      });
+    }
+  </script>
+
+</body>
+</html>
